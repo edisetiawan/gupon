@@ -19,8 +19,12 @@ if ($getUser === 1)
 	if (password_verify($password,$getDataUser['pengguna_password'])) 
 	{
 		session_start();
+		$id_session=session_id();
 		$_SESSION['pengguna_id']=$getDataUser['pengguna_id'];
-		//$_SESSION['username']=$getDataUser['pengguna_username'];
+        	$update="update pengguna set pengguna_session='".$id_session."' where pengguna_id='".$_SESSION['pengguna_id']."'";
+        	//echo $update; 
+        	//exit;
+		 $result=mysql_query($update);
 		header('location: admin_area.php');
 		//echo "Is Valid User";
 	}
