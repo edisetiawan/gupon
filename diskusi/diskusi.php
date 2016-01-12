@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../inc-db.php');
+$id_session=session_id();
 $id=$_GET['id'];
 $sql="select * from materi where materi_id='".$id."'";
 //echo $sql; exit;
