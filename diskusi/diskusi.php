@@ -23,10 +23,14 @@ FROM
  $result_pengguna=mysql_query($sql_pengguna);
  while ($data_pengguna=mysql_fetch_array($result_pengguna)) {
  
-echo "User :".$data_pengguna['pengguna_nama']."<br>";
-echo "<b>".$data_pengguna['pengguna_level']."</b><br>";
+echo "User :".$data_pengguna['pengguna_nama']."";
+if($data_pengguna['pengguna_session'] == $id_session){
+    echo "<b style='color: blue;'> ONLINE</b>";
+}else{
+    echo "<b style='color: red;'> OFLINE</b>";
+}
+echo "<br><b>".$data_pengguna['pengguna_level']."</b><br>";
 echo "Pesan :".$data_pengguna['diskusi']."<br>";
-
 
  	# code...
  }
