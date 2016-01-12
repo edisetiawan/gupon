@@ -81,7 +81,6 @@ INSERT INTO `materi` (`materi_id`, `materi_judul`, `materi_foto`) VALUES
 --
 -- Table structure for table `pengguna`
 --
-
 CREATE TABLE `pengguna` (
   `pengguna_id` int(11) NOT NULL,
   `pengguna_nama` varchar(12) DEFAULT NULL,
@@ -90,20 +89,21 @@ CREATE TABLE `pengguna` (
   `pengguna_kelas` varchar(12) DEFAULT NULL,
   `pengguna_username` varchar(200) DEFAULT NULL,
   `pengguna_password` varchar(200) DEFAULT NULL,
-  `pengguna_level` varchar(20) DEFAULT NULL
+  `pengguna_level` varchar(20) DEFAULT NULL,
+  `pengguna_session` varchar(60) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_foto`, `pengguna_email`, `pengguna_kelas`, `pengguna_username`, `pengguna_password`, `pengguna_level`) VALUES
-(1, 'Ghufron ', NULL, 'ghufron@yaho', 'XI A', 'ghufron', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA'),
-(2, 'Milla', NULL, 'milla@yahoo.', 'XI B', 'milla', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA'),
-(3, 'Yakup', NULL, 'yakup@yahoo.', 'XI C', 'yakup', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA'),
-(4, 'Yarto', NULL, 'yarto@yahoo.', 'XI D', 'yarto', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA'),
-(5, 'Heri', NULL, 'heri@yahoo.c', 'XI B', 'heri', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA'),
-(6, 'dwi', NULL, 'dwi@yahoo.co', '', 'dwi', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'GURU');
+INSERT INTO `pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_foto`, `pengguna_email`, `pengguna_kelas`, `pengguna_username`, `pengguna_password`, `pengguna_level`, `pengguna_session`) VALUES
+(1, 'Ghufron ', NULL, 'ghufron@yaho', 'XI A', 'ghufron', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA', 'l4gt325sarobmd9g2eaaqgv2f0'),
+(2, 'Milla', NULL, 'milla@yahoo.', 'XI B', 'milla', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA', 'd353ei9elangbnc9v65s6e7n92'),
+(3, 'Yakup', NULL, 'yakup@yahoo.', 'XI C', 'yakup', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA', NULL),
+(4, 'Yarto', NULL, 'yarto@yahoo.', 'XI D', 'yarto', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA', NULL),
+(5, 'Heri', NULL, 'heri@yahoo.c', 'XI B', 'heri', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'SISWA', NULL),
+(6, 'dwi', NULL, 'dwi@yahoo.co', '', 'dwi', '$2y$10$jX7rNVw9qvI4NBWrr9zq4Op7OoWVclUzr1gKl4IVacazAIQvLF7mi', 'GURU', NULL);
 
 --
 -- Indexes for dumped tables
